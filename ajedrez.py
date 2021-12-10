@@ -59,6 +59,8 @@ while opcion != 2:
             if tab[filaI][columnaI] != ' ':
                 filaF = int(input('Ingrese la fila a donde desea mover la ficha:'))
                 columnaF = int(input('Ingrese la columna donde desea mover la ficha:'))
+            else: 
+                print('Las posiciones indicadas no se encuentran dentro del tablero')
 
     elif opcion== 2:
         print('FIN DE LA PARTIDA')
