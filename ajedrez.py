@@ -7,3 +7,4 @@ def tablero():
         tablero.append(fila)
     return tablero
 
+tab = tablero()
