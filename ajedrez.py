@@ -23,7 +23,7 @@ def tablero():
             elif tuple ([i,j]) in reina:
                 fila.append('r')
             else:
-                fila.append('x')
+                fila.append(' ')
         tablero.append(fila)
     return tablero
   
