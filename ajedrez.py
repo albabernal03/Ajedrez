@@ -1,0 +1,2 @@
+def tablero():
+    tablero = []
