@@ -41,3 +41,9 @@ for i in tab:
 
 
 opcion = 1
+
+while opcion != 2:
+
+    print('.:MENU:.')
+    print('1: Mover ficha')
+    print('2: Finalizar')
