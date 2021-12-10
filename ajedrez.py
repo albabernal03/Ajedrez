@@ -50,4 +50,10 @@ while opcion != 2:
     
     opcion = int(input('Seleccione una opcion:'))
 
-   
+    if opcion == 1:
+        filaI = int(input('Ingrese la fila de la ficha a mover:'))
+        columnaI = int(input('Ingrese la columna de la ficha que desea mover:'))
+    elif opcion== 2:
+        print('FIN DE LA PARTIDA')
+    else:
+        print('Opción no válida!')
