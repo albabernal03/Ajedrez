@@ -11,6 +11,8 @@ def tablero():
         fila = []
     for j in range(8):
         fila.append('X')
+        if tuple[(i,j)] in peon:
+            fila.append('p')
         tablero.append(fila)
     return tablero
 
