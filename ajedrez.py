@@ -1,3 +1,10 @@
+#peon ---> p
+#torre ----> t
+#alfil ----> a
+#caballo ---> c
+#rey ----> #
+#reina ----> r
+
 def tablero():
     tablero = []
     for i in range(6):
@@ -8,3 +15,6 @@ def tablero():
     return tablero
 
 tab = tablero()
+
+for i in tab:
+    print(' '.join(i))
