@@ -47,3 +47,7 @@ while opcion != 2:
     print('.:MENU:.')
     print('1: Mover ficha')
     print('2: Finalizar')
+    
+    option = int(input('Ingrese fila de la ficha a mover:'))
+
+    
