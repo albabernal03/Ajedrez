@@ -38,3 +38,6 @@ tab = tablero()
 
 for i in tab:
     print(' '.join(i))
+
+
+opcion = 1
