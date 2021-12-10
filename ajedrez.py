@@ -20,6 +20,8 @@ def tablero():
                 fila.append('c')
             elif tuple ([i,j]) in rey:
                 fila.append('#')
+            elif tuple ([i,j]) in reina:
+                fila.append('r')
             else:
                 fila.append('x')
         tablero.append(fila)
@@ -31,6 +33,7 @@ torre = ((0,0), (0,7), (5,0), (5,7))
 alfil = ((0,2), (0,5), (5,2), (5,5))
 caballo = ((0,1), (0,6), (5,1), (5,6))
 rey = ((0,3), (5,3))
+reina = ((0,4), (5,4))
 tab = tablero()
 
 for i in tab:
