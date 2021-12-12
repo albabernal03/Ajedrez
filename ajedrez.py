@@ -36,9 +36,10 @@ rey = ((0,3), (5,3))
 reina = ((0,4), (5,4))
 tab = tablero()
 
-for i in tab:
-    print(' '.join(i))
-
+def mostrar_tablero (t):
+    for i in t:
+        print(' '.join(i))
+ 
 
 opcion = 1
 
@@ -59,10 +60,22 @@ while opcion != 2:
             if tab[filaI][columnaI] != ' ':
                 filaF = int(input('Ingrese la fila a donde desea mover la ficha:'))
                 columnaF = int(input('Ingrese la columna donde desea mover la ficha:'))
-            else: 
-                print('Las posiciones indicadas no se encuentran dentro del tablero')
 
-    elif opcion== 2:
-        print('FIN DE LA PARTIDA')
+                if filaF >= 0 and filaF <= 5 and columnaF >= 0 and columnaF <= 0:
+                    print('Puede mover ficha')
+
+                else:
+                    print('Las posiciones indicada no se encuentra del tablero') 
+
+            else:
+                print('No hay ficha en esta posición')
+
+        else:
+            print('Las posiciones indicadas no se encuentran dentro del tablero')
+
+    elif opcion == 2:
+        print('FIN DEL JUEGO')
     else:
-        print('Opción no válida!')
+        print('Opción inválida!')
+
+    
