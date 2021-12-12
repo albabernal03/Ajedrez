@@ -39,6 +39,9 @@ tab = tablero()
 def mostrar_tablero (t):
     for i in t:
         print(' '.join(i))
+
+def guardar_jugada():
+    
  
 
 opcion = 1
