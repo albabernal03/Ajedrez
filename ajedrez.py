@@ -61,7 +61,7 @@ while opcion != 2:
                 filaF = int(input('Ingrese la fila a donde desea mover la ficha:'))
                 columnaF = int(input('Ingrese la columna donde desea mover la ficha:'))
 
-                if filaF >= 0 and filaF <= 5 and columnaF >= 0 and columnaF <= 0:
+                if filaF >= 0 and filaF <= 5 and columnaF >= 0 and columnaF <= 7:
                     print('Puede mover ficha')
 
                 else:
