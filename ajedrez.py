@@ -45,14 +45,23 @@ def guardar_jugada():
         for fila in tab:
             f.write(','.join(fila)+ "\n")
  
-
+#num es un valor desde 1 hasta la cantidad de jugadas almacenadas en el fichero
 def cargar_jugada(num):
     jugada = []
     with open("partida_ajedrez.txt", "r") as f:
         lineas = f.readlines()
         indice_jugada = (num-1)*6
 
+        if num < 1 or indice_jugada >= len(lineas):
+            print("Número de jugada no válido")
+            return jugada
+        
+        for i in range(indice_jugada, indice_jugada+6):
+            jugada.append(lineas[i][:(len(lineas[i])-1)].split(","))
+    return jugada
+
 opcion = 1
+mostrar_tablero (tab)
 
 while opcion != 2:
 
@@ -78,9 +87,14 @@ while opcion != 2:
                     tab[filaF][columnaF] = pieza
                     tab[filaI][columnaI] = ' '
                     mostrar_tablero(tab)
+                    guardar_jugada()
 
+                    n = int(input('Números de movimiento: ')) 
+                    jugada = cargar_jugada(n)
+                    print('Tablero en el movimiento' + str(n))
+                    mostrar_tablero(jugada)
                 else:
-                    print('Las posiciones indicada no se encuentra del tablero') 
+                    print('Las posiciones indicada no se encuentra dentro del tablero') 
 
             else:
                 print('No hay ficha en esta posición')
