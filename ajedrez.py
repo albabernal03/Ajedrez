@@ -63,6 +63,7 @@ while opcion != 2:
 
                 if filaF >= 0 and filaF <= 5 and columnaF >= 0 and columnaF <= 7:
                     print('Puede mover ficha')
+                    pieza = tab[filaI][columnaI]
 
                 else:
                     print('Las posiciones indicada no se encuentra del tablero') 
