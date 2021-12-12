@@ -41,8 +41,16 @@ def mostrar_tablero (t):
         print(' '.join(i))
 
 def guardar_jugada():
-    
+    with open("partida_ajedrez.txt", "a") as f:
+        for fila in tab:
+            f.write(','.join(fila)+ "\n")
  
+
+def cargar_jugada(num):
+    jugada = []
+    with open("partida_ajedrez.txt", "r") as f:
+        lineas = f.readlines()
+        indice_jugada = (num-1)*6
 
 opcion = 1
 
